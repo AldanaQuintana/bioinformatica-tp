@@ -1,0 +1,70 @@
+BLASTP 2.2.28+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for composition-based statistics: Alejandro A. Schaffer,
+L. Aravind, Thomas L. Madden, Sergei Shavirin, John L. Spouge, Yuri
+I. Wolf, Eugene V. Koonin, and Stephen F. Altschul (2001),
+"Improving the accuracy of PSI-BLAST protein database searches with
+composition-based statistics and other refinements", Nucleic Acids
+Res. 29:2994-3005.
+
+
+
+Database: swissprot
+           462,164 sequences; 173,202,562 total letters
+
+
+
+Query= lcl|Sequence 1 ORF:3..515 Frame -1
+
+Length=171
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+sp|B4NBB0.1|SPNE_DROWI  RecName: Full=Probable ATP-dependent RNA ...  32.3    2.2  
+
+
+>sp|B4NBB0.1|SPNE_DROWI RecName: Full=Probable ATP-dependent RNA helicase spindle-E; 
+AltName: Full=Homeless [Drosophila willistoni]
+Length=1432
+
+ Score = 32.3 bits (72),  Expect = 2.2, Method: Composition-based stats.
+ Identities = 23/78 (29%), Positives = 38/78 (49%), Gaps = 5/78 (6%)
+
+Query  64   QLTQCGKGALEVVQVSQAITKGTEHFLAMSLHLRVAHNSIRSGQIPKGLKEPLGPRVDHQ  123
+             +  CGK   + ++++ +IT  +EH  +      ++H  + +G I K LK  L  RVD  
+Sbjct  898  HIVSCGKFFFQPLELADSITNMSEHINSPK---NLSHYVVDAGSITKNLKL-LAKRVDDF  953
+
+Query  124  QPAQGLTTNFIHVHLAPQ  141
+            Q AQ +     H H  P+
+Sbjct  954  QRAQVIRVE-THSHQYPK  970
+
+
+
+Lambda      K        H        a         alpha
+   0.322    0.134    0.404    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 7615254532
+
+
+  Database: swissprot
+    Posted date:  Nov 8, 2015  4:23 PM
+  Number of letters in database: 173,202,562
+  Number of sequences in database:  462,164
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

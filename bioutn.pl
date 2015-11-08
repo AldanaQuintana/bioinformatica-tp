@@ -7,10 +7,13 @@ use v5.14;
 
 use Bio::SeqIO;
 use Bio::SeqUtils;
+use Bio::Tools::Run::StandAloneBlastPlus;
 
 use Getopt::Long;
 
+# Opciones
 my $punto;
+my $remoto;
 
 sub help
 {
@@ -30,6 +33,19 @@ Trabajo Práctico Final Bioinformática 2C 2015
            de lectura posibles.
            
            Ejemplo: $0 --punto 1 data/HBB_mRNA.gb
+           
+        2: BLAST+ sobre secuencias FASTA, local o remoto. Para realizar ejecuciones
+           locales es necesario contar con la base swissprot descomprimida en
+           db/swissprot (puede ser obtenida en la dirección
+           ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz). La creación de la
+           base de datos para el algoritmo se realiza la primera vez que es usada de
+           forma interna.
+        
+           Ejemplo de ejecución remota: $0 --punto 2 -r data/HBB_mRNA_aa.fas
+           Ejemplo de ejecución local:  $0 --punto 2    data/HBB_mRNA_aa.fas
+           
+   --remoto, -r
+      Usar algoritmos remotos cuando sea posible (ver punto 2).
    
    --help, --ayuda, -?, -h
       Muestra este mensaje.
@@ -40,6 +56,7 @@ STOP
 
 GetOptions(
    'punto|p=s'       => \$punto,
+   'remoto|r'        => \$remoto,
    'help|ayuda|h|?'  => \&help,
 ) or help;
 
@@ -82,6 +99,38 @@ sub punto1
    }
 }
 
+sub punto2
+{
+   foreach my $file_in (@_)
+   {
+      # Cambiar la extension del archivo de salida
+      (my $file_out = $file_in) =~ s/\.[^.]+$/_blastp.out/;
+      
+      my $fac;
+      
+      if ($remoto) {   
+         $fac = Bio::Tools::Run::StandAloneBlastPlus->new(
+            -db_name  => 'swissprot',
+            -remote   => 1,
+         );
+      } else {
+         $fac = Bio::Tools::Run::StandAloneBlastPlus->new(
+            -db_name  => 'swissprot',
+            -db_data  => 'swissprot',
+            -create   => 1,
+         );
+      }
+      
+      print "Ejecutando BLASTp ", ($remoto? 'remoto': 'local'),
+            " para las secuencias de $file_in ...\n";
+      
+      $fac->blastp(
+         -query   => $file_in,
+         -outfile => $file_out,
+      );
+   }
+}
+
 # Entry point
 {
    help("Modo de operación (punto) no especificado.")
@@ -91,7 +140,9 @@ sub punto1
       unless @ARGV;
 
    if ($punto == 1) {
-      punto1 (@ARGV);
+      punto1(@ARGV);
+   } elsif ($punto == 2) {
+      punto2(@ARGV);
    } else {
       help("Punto $punto desconocido.");
    }
