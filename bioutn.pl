@@ -53,6 +53,11 @@ Trabajo Práctico Final Bioinformática 2C 2015
            Ejemplo: $0 --punto 3 data/HBB_mRNA_aa_blastp.out Hemoglobin
            Listará todos los los hits (accession + descripción) que tengan al menos una coincidencia con "Hemoglobin"
 
+	4: Usando EMBOSS dada una secuencia de nucleotidos en formato fasta calcula los ORFs, generando un output en data/ORFs.out.
+	   Luego realiza el analisis de dominios de las secuencias de aminoacidos obtenidas, generando un output en data/Dominios.out.
+
+	   Ejemplo: $0 --punto 4 data/HBB_RefSeq_mRNA.gb
+
    --remoto, -r
       Usar algoritmos remotos cuando sea posible (ver punto 2).
 
@@ -169,6 +174,29 @@ sub punto3
   close $file_output;
 }
 
+use Bio::Factory::EMBOSS;
+use Bio::SearchIO;
+
+sub punto4
+{
+	foreach my $input (@_)
+	{
+
+	  my $factory = new Bio::Factory::EMBOSS;
+	  my $app = $factory->program("getorf");
+	  my %param = ( -sequence => $input, -outseq => "data/orfs.out");
+
+	  print "Cargando ORFs y generando archivo de salida ORFS.out\n";
+	  $app->run(\%param);
+
+	  $app = $factory->program("patmatmotifs");
+	  %param = ( -sequence => $input, -full => "Y", -outfile => "data/dominios.out");
+	  print "Cargando motivos y generando archivo de salida dominios.out\n";
+	  $app->run(\%param);
+
+	}
+}
+
 # Entry point
 {
    help("Modo de operación (punto) no especificado.")
@@ -183,7 +211,9 @@ sub punto3
       punto2(@ARGV);
    } elsif ($punto == 3){
       punto3(@ARGV)
-    } else {
+   } elsif ($punto == 4){
+      punto4(@ARGV)
+   } else {
       help("Punto $punto desconocido.");
    }
 }
