@@ -16,7 +16,7 @@ Res. 29:2994-3005.
 
 
 
-Database: Non-redundant UniProtKB/SwissProt sequences
+Database: swissprot
            462,164 sequences; 173,202,562 total letters
 
 
@@ -25,8 +25,6 @@ Query= AF117710-0F Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
 cds.
 
 Length=187
-
-RID: 42E3CMDT013
                                                                       Score     E
 Sequences producing significant alignments:                          (Bits)  Value
 
@@ -5658,14 +5656,14 @@ Sbjct  121  DFTPDCQAAWQKLVRVVAHALARKYH  146
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.329    0.144    0.461    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9422068194
 
 
 Query= AF117710-1F Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
@@ -5673,35 +5671,19 @@ cds.
 
 Length=187
 
-RID: 42E3CMDT013
-                                                                      Score     E
-Sequences producing significant alignments:                          (Bits)  Value
 
-sp|Q1QIJ6.1|ISPE_NITHX  RecName: Full=4-diphosphocytidyl-2-C-meth...  30.8    5.9  
-
-
->sp|Q1QIJ6.1|ISPE_NITHX RecName: Full=4-diphosphocytidyl-2-C-methyl-D-erythritol kinase; 
-Short=CMK; AltName: Full=4-(cytidine-5'-diphospho)-2-C-methyl-D-erythritol 
-kinase
-Length=303
-
- Score = 30.8 bits (68),  Expect = 5.9, Method: Compositional matrix adjust.
- Identities = 13/35 (37%), Positives = 20/35 (57%), Gaps = 0/35 (0%)
-
-Query  112  RTSGSWATCWSVCWPITLAKNSPHQCRLPIRKWWL  146
-            R SGS ATC+++      A+N+    RL   +WW+
-Sbjct  263  RMSGSGATCFAIFGNEADARNAAQTIRLDRPQWWV  297
+***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.340    0.144    0.589    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9422068194
 
 
 Query= AF117710-2F Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
@@ -5709,21 +5691,19 @@ cds.
 
 Length=186
 
-RID: 42E3CMDT013
-
 
 ***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.352    0.158    0.665    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9299703672
 
 
 Query= AF117710-0R Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
@@ -5731,35 +5711,29 @@ cds.
 
 Length=187
 
-RID: 42E3CMDT013
-
 
 ***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.338    0.148    0.571    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9422068194
 
 
 Query= AF117710-1R Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
 cds.
 
 Length=187
-
-RID: 42E3CMDT013
                                                                       Score     E
 Sequences producing significant alignments:                          (Bits)  Value
 
 sp|B4NBB0.1|SPNE_DROWI  RecName: Full=Probable ATP-dependent RNA ...  32.3    2.7  
-sp|Q899G5.2|MURD_CLOTE  RecName: Full=UDP-N-acetylmuramoylalanine...  30.4    8.7  
-sp|Q8WUY3.3|PRUN2_HUMAN  RecName: Full=Protein prune homolog 2; A...  30.4    9.1  
 
 
 >sp|B4NBB0.1|SPNE_DROWI RecName: Full=Probable ATP-dependent RNA helicase spindle-E; 
@@ -5778,40 +5752,15 @@ Query  146  QPAQGLTTNFIHVHLAPQ  163
 Sbjct  954  QRAQVIRVE-THSHQYPK  970
 
 
->sp|Q899G5.2|MURD_CLOTE RecName: Full=UDP-N-acetylmuramoylalanine--D-glutamate ligase; 
-AltName: Full=D-glutamic acid-adding enzyme; AltName: Full=UDP-N-acetylmuramoyl-L-alanyl-D-glutamate 
-synthetase
-Length=458
 
- Score = 30.4 bits (67),  Expect = 8.7, Method: Compositional matrix adjust.
- Identities = 16/44 (36%), Positives = 22/44 (50%), Gaps = 1/44 (2%)
-
-Query  25   SKKASLVILVGQGISHTSHHFLIGSLHW-WGEFFAKVMGQHTDQ  67
-             KK S  +L  +GISH  H  L+G   +   E F KVM   ++ 
-Sbjct  360  DKKISFEVLAKEGISHIKHLILLGDTKYKIEEAFKKVMRDSSED  403
-
-
->sp|Q8WUY3.3|PRUN2_HUMAN RecName: Full=Protein prune homolog 2; AltName: Full=BNIP2 motif-containing 
-molecule at the C-terminal region 1
-Length=3088
-
- Score = 30.4 bits (67),  Expect = 9.1, Method: Composition-based stats.
- Identities = 11/22 (50%), Positives = 16/22 (73%), Gaps = 0/22 (0%)
-
-Query  53    WGEFFAKVMGQHTDQHVAQEPE  74
-             WG+F   VMGQ+ D+ + +EPE
-Sbjct  2349  WGDFEYDVMGQNIDEDLLREPE  2370
-
-
-
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.329    0.141    0.433    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9422068194
 
 
 Query= AF117710-2R Homo sapiens hemoglobin beta chain (HBB) mRNA, complete
@@ -5819,97 +5768,62 @@ cds.
 
 Length=186
 
-RID: 42E3CMDT013
-
 
 ***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.357    0.153    0.566    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 9299703672
 
 
 Query= NM_000518-0F Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
 
-RID: 42E3CMDT013
-                                                                      Score     E
-Sequences producing significant alignments:                          (Bits)  Value
 
-sp|Q1QIJ6.1|ISPE_NITHX  RecName: Full=4-diphosphocytidyl-2-C-meth...  30.8    8.2  
-sp|Q9LTT3.1|HMG10_ARATH  RecName: Full=High mobility group B prot...  30.4    9.4  
-
-
->sp|Q1QIJ6.1|ISPE_NITHX RecName: Full=4-diphosphocytidyl-2-C-methyl-D-erythritol kinase; 
-Short=CMK; AltName: Full=4-(cytidine-5'-diphospho)-2-C-methyl-D-erythritol 
-kinase
-Length=303
-
- Score = 30.8 bits (68),  Expect = 8.2, Method: Compositional matrix adjust.
- Identities = 13/35 (37%), Positives = 20/35 (57%), Gaps = 0/35 (0%)
-
-Query  119  RTSGSWATCWSVCWPITLAKNSPHQCRLPIRKWWL  153
-            R SGS ATC+++      A+N+    RL   +WW+
-Sbjct  263  RMSGSGATCFAIFGNEADARNAAQTIRLDRPQWWV  297
-
-
->sp|Q9LTT3.1|HMG10_ARATH RecName: Full=High mobility group B protein 10; AltName: Full=Nucleosome/chromatin 
-assembly factor group D 10
-Length=319
-
- Score = 30.4 bits (67),  Expect = 9.4, Method: Compositional matrix adjust.
- Identities = 17/53 (32%), Positives = 27/53 (51%), Gaps = 1/53 (2%)
-
-Query  149  RKW-WLVWLMPWPTSITKLAFLLSNFY*RFLCSLSPTTKLGDIMKGLEHLDSA  200
-            RKW  ++    +PT+IT  +F+L  +Y +FL  L     L   +  L+  D A
-Sbjct  93   RKWKEVIGAFSFPTTITSASFVLRKYYLKFLFQLEHVYYLEKPVSSLQSTDEA  145
+***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.343    0.146    0.592    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
 Query= NM_000518-1F Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
 
-RID: 42E3CMDT013
-
 
 ***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.350    0.157    0.638    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
 Query= NM_000518-2F Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
-
-RID: 42E3CMDT013
                                                                       Score     E
 Sequences producing significant alignments:                          (Bits)  Value
 
@@ -11543,26 +11457,23 @@ Sbjct  121  DFTPDCQAAWQKLVRVVAHALARKYH  146
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.336    0.148    0.497    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
 Query= NM_000518-0R Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
-
-RID: 42E3CMDT013
                                                                       Score     E
 Sequences producing significant alignments:                          (Bits)  Value
 
 sp|B4NBB0.1|SPNE_DROWI  RecName: Full=Probable ATP-dependent RNA ...  32.0    3.5  
-sp|Q899G5.2|MURD_CLOTE  RecName: Full=UDP-N-acetylmuramoylalanine...  30.4    9.5  
 
 
 >sp|B4NBB0.1|SPNE_DROWI RecName: Full=Probable ATP-dependent RNA helicase spindle-E; 
@@ -11581,88 +11492,57 @@ Query  161  QPAQGLTTNFIHVHLAPQ  178
 Sbjct  954  QRAQVIRVE-THSHQYPK  970
 
 
->sp|Q899G5.2|MURD_CLOTE RecName: Full=UDP-N-acetylmuramoylalanine--D-glutamate ligase; 
-AltName: Full=D-glutamic acid-adding enzyme; AltName: Full=UDP-N-acetylmuramoyl-L-alanyl-D-glutamate 
-synthetase
-Length=458
 
- Score = 30.4 bits (67),  Expect = 9.5, Method: Compositional matrix adjust.
- Identities = 16/44 (36%), Positives = 22/44 (50%), Gaps = 1/44 (2%)
-
-Query  40   SKKASLVILVGQGISHTSHHFLIGSLHW-WGEFFAKVMGQHTDQ  82
-             KK S  +L  +GISH  H  L+G   +   E F KVM   ++ 
-Sbjct  360  DKKISFEVLAKEGISHIKHLILLGDTKYKIEEAFKKVMRDSSED  403
-
-
-
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.331    0.141    0.433    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
 Query= NM_000518-1R Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
 
-RID: 42E3CMDT013
-
 
 ***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.359    0.154    0.570    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
 Query= NM_000518-2R Homo sapiens hemoglobin, beta (HBB), mRNA.
 
 Length=208
 
-RID: 42E3CMDT013
-                                                                      Score     E
-Sequences producing significant alignments:                          (Bits)  Value
 
-sp|A1WY97.1|ACSA_HALHL  RecName: Full=Acetyl-coenzyme A synthetas...  30.8    8.6  
-
-
->sp|A1WY97.1|ACSA_HALHL RecName: Full=Acetyl-coenzyme A synthetase; Short=AcCoA synthetase; 
-Short=Acs; AltName: Full=Acetate--CoA ligase; AltName: 
-Full=Acyl-activating enzyme
-Length=645
-
- Score = 30.8 bits (68),  Expect = 8.6, Method: Composition-based stats.
- Identities = 15/33 (45%), Positives = 19/33 (58%), Gaps = 1/33 (3%)
-
-Query  126  SCHEPSP*GCP*QHQEWTDPQRTQRTSGSKGRP  158
-            +C E SP  CP +H +  DP     TSGS G+P
-Sbjct  237  ACAEASP-DCPPEHMDAEDPLFILYTSGSTGKP  268
+***** No hits found *****
 
 
 
-Lambda      K        H
-   0.329    0.144    0.461 
+Lambda      K        H        a         alpha
+   0.338    0.147    0.558    0.792     4.96 
 
 Gapped
-Lambda      K        H
-   0.267   0.0410    0.140 
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
 
-Effective search space used: 0
+Effective search space used: 11658258624
 
 
-  Database: Non-redundant UniProtKB/SwissProt sequences
-    Posted date:  Nov 1, 2015 01:45 PM
+  Database: swissprot
+    Posted date:  Nov 8, 2015  4:23 PM
   Number of letters in database: 173,202,562
   Number of sequences in database:  462,164
 
