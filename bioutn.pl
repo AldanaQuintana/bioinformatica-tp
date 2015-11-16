@@ -9,6 +9,7 @@ use Getopt::Long;
 
 use Ex1;
 use Ex2;
+use Ex2b;
 use Ex3;
 use Ex4;
 
@@ -44,6 +45,10 @@ Trabajo Práctico Final Bioinformática 2C 2015
 
            Ejemplo de ejecución remota: $0 --punto 2 -r data/HBB_mRNA_aa.fas
            Ejemplo de ejecución local:  $0 --punto 2    data/HBB_mRNA_aa.fas
+
+	2b: Ejecuta clustalw para uno o mas archivos de secuencias FASTA.
+
+	   Ejemplo: $0 --punto 2b data/HBB_BLASTtop10.fas
 
         3: Parsea un output de blast (por ejemplo, el resultado del ejercicio 2)
            con un pattern como parámetro
@@ -83,13 +88,15 @@ GetOptions(
    help("Ningún archivo especificado")
       unless @ARGV;
 
-   if ($punto == 1) {
+   if ($punto eq '1') {
       Ex1::run(@ARGV);
-   } elsif ($punto == 2) {
+   } elsif ($punto eq '2') {
       Ex2::run(@ARGV);
-   } elsif ($punto == 3) {
+   } elsif ($punto eq '2b') {
+      Ex2b::run(@ARGV);
+   } elsif ($punto eq '3') {
       Ex3::run(@ARGV);
-   } elsif ($punto == 4) {
+   } elsif ($punto eq '4') {
       Ex4::run(@ARGV);
    } else {
       help("Punto $punto desconocido.");
